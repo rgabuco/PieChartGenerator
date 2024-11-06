@@ -108,7 +108,7 @@ namespace PieChart
 
             for (int i = 0; i < values.Length; i++)
             {
-                float sweepAngle = (float)(values[i] / total) * 360;
+                float sweepAngle = (float)(values[i] / total) * 360; // Calculate the angle for the current value
                 g.FillPie(new SolidBrush(GetColor(i)), rect, startAngle, sweepAngle);
 
                 // Calculate the angle for the text
@@ -150,7 +150,7 @@ namespace PieChart
             };
             this.Controls.Add(legendHeader);
 
-            // Add new legend labels
+            // Add legend labels
             for (int i = 0; i < labels.Length; i++)
             {
                 Label legendLabel = new Label
